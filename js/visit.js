@@ -1,4 +1,4 @@
-var countDownDate = new Date("November 7, 2022 00:00:01").getTime();
+var countDownDate = new Date("January 28, 2024 16:27:01").getTime();
 var x = setInterval(function() {
 
   // Get today's date and time
@@ -6,9 +6,9 @@ var x = setInterval(function() {
     
   // Find the distance between now and the count down date
   var distance = (now - countDownDate)/1000
-  document.getElementById("cd-d").innerHTML = Math.min(Math.floor((distance-4188400)/10),124)
-  document.getElementById("cd-h").innerHTML = Math.min(Math.floor((distance-4193800)/40),22)
-  document.getElementById("cd-m").innerHTML = Math.floor((distance-4159000)/10)
+  document.getElementById("cd-d").innerHTML = Math.floor((distance)/60)
+  document.getElementById("cd-h").innerHTML = Math.floor((distance)/100)
+  document.getElementById("cd-m").innerHTML = Math.floor((distance+1000)/60)
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "Đã kết thúc";
